@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link href="https://r-amano.github.io/mcs/styles/main.css" rel="stylesheet" initial-scale=1.0 />
+    <title>mcbeSupport</title>
+  </head>
+  <script>
+  	function clips(text){
+  		navigator.clipboard.writeText(text).then(()=>{
+    		alert("copy: " + text);
+  		},()=>{
+  			alert("error");
+  		});
+		}
+  </script>
+	<body>
+  	<h1>Copy Clipboad</h1>
+		<button type="button" class="copy-btn" onclick="clips(`test`)">
+			テキストをコピー
+		</button>
+		<style>
+  		.copy-btn {
+    		display: inline-block;
+    		padding: 10px 20px;
+    		background-color: #333;
+    		color: white;
+    		text-decoration: none;
+    		border-radius: 5px;
+  		}
+  		.copy-btn:hover {
+    		background-color: #555;
+  		}
+		</style>
+	</body>
+
+
+</html>
